@@ -8,7 +8,7 @@ const Banner = () => {
     <>
       <div className="banner pt-10">
         <p className="text-white headding text-center text-1xl sm:text-4xl mt-3 pb-6">
-          Get all the Info regarding your favorite Crypto Currency
+          Trending Cryptocurrency across the world
         </p>
         <Carousel></Carousel>
       </div>
