@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Coinpage from "./pages/Coinpage";
 import Homepage from "./pages/Homepage";
+import Searchpage from "./pages/Searchpage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} exact />
           <Route path="/coins/:id" element={<Coinpage />} />
+          <Route path="/search" element={<Searchpage />} />
         </Routes>
       </div>
     </BrowserRouter>

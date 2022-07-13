@@ -72,10 +72,15 @@ const Coinpage = () => {
                       : "text-green-600    font-semibold flex items-center justify-center px-3 py-3 border-gray-800 border"
                   }
                 >
-                  {coin?.market_data.price_change_percentage_24h_in_currency
-                    .inr <= 0
-                    ? "⮟"
-                    : "⮝"}
+                  <i
+                    className={
+                      coin?.market_data.price_change_percentage_24h_in_currency.inr.toFixed(
+                        2
+                      ) <= 0
+                        ? "fa fa-caret-down mx-1"
+                        : "fa fa-caret-up mx-1"
+                    }
+                  ></i>
                   {coin?.market_data.price_change_percentage_24h_in_currency.inr.toFixed(
                     2
                   )}

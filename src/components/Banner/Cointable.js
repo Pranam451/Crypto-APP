@@ -66,7 +66,13 @@ const Cointable = () => {
                     : "text-green-600 text-sm col-1 w-1/4 font-semibold flex items-center justify-center"
                 }
               >
-                {row.price_change_percentage_24h <= 0 ? "⮟" : "⮝"}
+                <i
+                  className={
+                    row.price_change_percentage_24h <= 0
+                      ? "fa fa-caret-down mx-1"
+                      : "fa fa-caret-up mx-1"
+                  }
+                ></i>
                 {row.price_change_percentage_24h}%
               </div>
               <div className="col-1 w-1/4 flex items-center justify-center">
