@@ -83,21 +83,27 @@ const Cointable = () => {
           );
         })}
       </div>
-      <Pagination
-        size="large"
-        color="primary"
-        style={{
-          padding: 20,
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-        }}
-        count={10}
-        onChange={(_, value) => {
-          setpage(value);
-          window.scroll(0, 450);
-        }}
-      ></Pagination>
+      <div className="w-full  px-2 sm:px-10">
+        <div className=" bg-blue-500 rounded-md">
+          <Pagination
+            size="large"
+            color="primary"
+            text="white"
+            style={{
+              padding: 20,
+              width: "100%",
+              text: "white",
+              display: "flex",
+              justifyContent: "center",
+            }}
+            count={10}
+            onChange={(_, value) => {
+              setpage(value);
+              window.scroll(0, 450);
+            }}
+          ></Pagination>
+        </div>
+      </div>
     </>
   );
 };

@@ -35,7 +35,11 @@ const Coinpage = () => {
         <p className="text-blue-500 mt-5 text-center text-3xl">
           Market Price:
           <span className="text-white">
-            ₹{coin?.market_data.market_cap.inr.toFixed(2)}
+            ₹
+            {coin?.market_data.market_cap.inr
+
+              .toString()
+              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
           </span>
         </p>
         <div className="w-full flex justify-center my-5">
@@ -56,13 +60,16 @@ const Coinpage = () => {
             <tbody>
               <tr>
                 <td className="px-3 py-3 text-white text-center border border-gray-800">
-                  ₹{coin?.market_data.current_price.inr.toFixed(2)}
+                  ₹
+                  {coin?.market_data.current_price.inr
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                 </td>
                 <td className="px-3 py-3 text-white text-center border border-gray-800">
                   ₹
-                  {coin?.market_data.price_change_24h_in_currency.inr.toFixed(
-                    2
-                  )}
+                  {coin?.market_data.price_change_24h_in_currency.inr
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                 </td>
                 <td
                   className={
@@ -74,9 +81,8 @@ const Coinpage = () => {
                 >
                   <i
                     className={
-                      coin?.market_data.price_change_percentage_24h_in_currency.inr.toFixed(
-                        2
-                      ) <= 0
+                      coin?.market_data.price_change_percentage_24h_in_currency
+                        .inr <= 0
                         ? "fa fa-caret-down mx-1"
                         : "fa fa-caret-up mx-1"
                     }
